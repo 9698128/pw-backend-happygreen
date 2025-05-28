@@ -10,12 +10,7 @@ SECRET_KEY = config('SECRET_KEY', default='your-secret-key-here')
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 # Nel settings.py
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '10.0.2.2',  # Per emulatore Android
-    '192.168.1.76',
-]
+ALLOWED_HOSTS = [ '*' ]
 
 # settings.py
 INSTALLED_APPS = [
@@ -98,8 +93,7 @@ SIMPLE_JWT = {
 
 # CORS Settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "http://pjwrossi5.duckdns.org",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  # Solo per sviluppo
